@@ -6,7 +6,7 @@ using System;
 namespace Game2
 {
     /// <summary>
-    /// This is the main type for your game.
+    /// This is the main type for your game. sdcsccsdccs
     /// </summary>
     public class Game1 : Game
     {
