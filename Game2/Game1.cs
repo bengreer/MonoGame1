@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Game2
 {
@@ -11,6 +12,15 @@ namespace Game2
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        Random rand = new Random();
+        Texture2D squareTexture;
+        Rectangle currentSquare;
+        int PlayerScore = 0;
+        float timeRemaining = 0.0f;
+        const float TimePerSquare = 0.75f;
+        Color[] colors = new Color[3] { Color.Red, Color.Green, Color.Blue };
+
 
         public Game1()
         {
@@ -27,7 +37,7 @@ namespace Game2
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            this.IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -76,6 +86,7 @@ namespace Game2
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
 
             base.Draw(gameTime);
         }
